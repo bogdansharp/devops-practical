@@ -1,8 +1,8 @@
-# This workflow demonstrates how you can use various environments (development, staging, production) in github.
+# This workflow demonstrates how you can use various environments (development, staging, production) in GitHub.
 
 name: CI + CD demo pipeline
 
-# Define when the workflow should run. On a push to main, a PR to main or manually with worfkow_dispatch
+# Define when the workflow should run: on a push to main, a PR to main, or manually with workflow_dispatch
 on: 
   push:
     branches: [ main ] 
