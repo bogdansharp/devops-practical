@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - name: print github ref
+        run: echo ${{github.head_ref}}
       - name: Code_scanning
         run: echo Imagine we are linting and scanning our code here
       - name: Compile
@@ -50,7 +52,7 @@ jobs:
   DeployStaging:
     name: Deploy to Staging
     # deploy to staging only if we are committing to main via a push
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && github.head_ref == 'refs/heads/master'
     needs: [ Build ]
     runs-on: ubuntu-latest
     environment:
