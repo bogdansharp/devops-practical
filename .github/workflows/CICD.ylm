@@ -57,8 +57,8 @@ jobs:
       name: Staging
       url: 'http://test.myapp.com'
     steps:
-    - name: Deploy
-      run: echo I am deploying to staging http://test.myapp.com
+      - name: Deploy
+        run: echo I am deploying to staging http://test.myapp.com
   
   # Deploy to production environment
   DeployProduction:
