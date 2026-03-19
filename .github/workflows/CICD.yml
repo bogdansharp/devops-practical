@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - name: print github ref
+        run: echo ${{github.ref}}
       - name: Code_scanning
         run: echo Imagine we are linting and scanning our code here
       - name: Compile
