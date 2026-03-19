@@ -5,9 +5,9 @@ name: CI + CD demo pipeline
 # Define when the workflow should run: on a push to main, a PR to main, or manually with workflow_dispatch
 on: 
   push:
-    branches: [ main ] 
+    branches: [ master ] 
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
   workflow_dispatch:
 
 # Define some jobs that should run
@@ -50,7 +50,7 @@ jobs:
   DeployStaging:
     name: Deploy to Staging
     # deploy to staging only if we are committing to main via a push
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     needs: [ Build ]
     runs-on: ubuntu-latest
     environment:
