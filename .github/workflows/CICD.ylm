@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     # Define some environment variables
     environment: 
-      # The environment name must match the envrionment name in the repository
+      # The environment name must match the environment name in the repository
       name: Development
       url: 'http://dev.myapp.com'
     steps:
