@@ -1,1 +1,3 @@
 # devops-practical
+
+updated readme
